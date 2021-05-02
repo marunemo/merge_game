@@ -17,7 +17,7 @@ public class MergeObjectInteraction : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D col) {
-        if (col.gameObject.name[2].Equals(this.gameObject.name[2])) {
+        if (col.gameObject.name[2].Equals(this.gameObject.name[2]) && !name[3].Equals("6")) {
             if(this.transform.position.y > col.transform.position.y)
                 Instantiate(nextMerge,
                             new Vector2(0, (col.transform.position.y + this.transform.position.y) / 2),
