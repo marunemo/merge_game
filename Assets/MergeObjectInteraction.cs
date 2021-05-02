@@ -20,7 +20,7 @@ public class MergeObjectInteraction : MonoBehaviour {
         if (col.gameObject.name[2].Equals(this.gameObject.name[2]) && !name[3].Equals("6")) {
             if(this.transform.position.y > col.transform.position.y)
                 Instantiate(nextMerge,
-                            new Vector2(0, (col.transform.position.y + this.transform.position.y) / 2),
+                            new Vector2((col.transform.position.x + this.transform.position.x) / 2, (col.transform.position.y + this.transform.position.y) / 2),
                             Quaternion.Euler(0, 0, Random.Range(-360, 360)));
             Destroy(this.gameObject);
         }
